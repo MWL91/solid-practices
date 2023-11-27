@@ -1,0 +1,53 @@
+version: '3.5'
+networks:
+  dockerphp74:
+    name: dockerphp74
+    driver: bridge
+services:
+  nginx:
+    container_name: nginx
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+      - ./docker/conf/:/etc/nginx/conf.d/
+      - ./docker/www_logs/nginx:/var/log/nginx
+    links:
+      - phpfpm
+    networks:
+      - dockerphp74
+  phpfpm:
+    ports:
+      - "6665:6001"
+    container_name: dockerphp74
+    build: docker/containers/php-fpm
+    command: bash -c "php-fpm -F"
+    volumes:
+      - ./:/var/www/html:cached
+      - ./docker/php-custom.ini:/usr/local/etc/php/conf.d/php-custom.ini
+    networks:
+      - dockerphp74
+  mysql:
+    networks:
+      - dockerphp74
+    container_name: mysql
+    image: mariadb:latest
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: database
+  dockerphp74_phpmyadmin:
+    networks:
+      - dockerphp74
+    container_name: dockerphp74_phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    depends_on:
+      - mysql
+    ports:
+      - '8079:80'
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USERNAME: root
+      PMA_HOST: mysql

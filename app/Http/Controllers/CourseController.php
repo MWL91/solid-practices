@@ -57,7 +57,7 @@ class CourseController extends Controller
             $rating = new CourseRating();
             $success_message = 'Your review have been added successfully';
         }
-        
+
         $rating->user_id = \Auth::user()->id;
         $rating->course_id = $request->input('course_id');
         
