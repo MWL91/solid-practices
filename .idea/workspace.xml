@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="766eb5dd-fa46-49fc-992f-7fa8b6d85ac8" name="Changes" comment="task/2 (02_06)">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php-test-framework.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/CourseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CoursersRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Db/CoursesRepositoryDb.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Db/CoursesRepositoryDb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit-integration.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CoursesRepositoryTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" />
+    <list default="true" id="766eb5dd-fa46-49fc-992f-7fa8b6d85ac8" name="Changes" comment="solution/2 (02_07)">
+      <change beforePath="$PROJECT_DIR$/app/Repositories/CoursersRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CoursersRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +255,7 @@
       <updated>1701111522675</updated>
       <workItem from="1701111525251" duration="766000" />
       <workItem from="1701113514085" duration="5805000" />
-      <workItem from="1701276698174" duration="11826000" />
+      <workItem from="1701276698174" duration="12057000" />
     </task>
     <task id="LOCAL-00001" summary="with docker inside">
       <created>1701118070997</created>
@@ -302,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701286532241</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="solution/2 (02_07)">
+      <created>1701292089479</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701292089479</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,6 +310,7 @@
     <MESSAGE value="task/1 (02_03)" />
     <MESSAGE value="solution/1 (02_05)" />
     <MESSAGE value="task/2 (02_06)" />
-    <option name="LAST_COMMIT_MESSAGE" value="task/2 (02_06)" />
+    <MESSAGE value="solution/2 (02_07)" />
+    <option name="LAST_COMMIT_MESSAGE" value="solution/2 (02_07)" />
   </component>
 </project>

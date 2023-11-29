@@ -1,6 +1,6 @@
 <?php
 
-na mespace App\Repositories;
+namespace App\Repositories;
 
 use Illuminate\Support\Collection;
 
