@@ -11,15 +11,16 @@
 |
 */
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Auth::routes();
-Route::get('logout', 'Auth\LoginController@logout')->name('logOut');
+Route::get('logout', [LoginController::class, 'logout'])->name('logOut');
 
-Route::get('/login/{social}','Auth\LoginController@socialLogin')->where('social','twitter|facebook|linkedin|google|github|bitbucket');
+Route::get('/login/{social}',[LoginController::class, 'socialLogin'])->where('social','twitter|facebook|linkedin|google|github|bitbucket');
 
 Route::get('/login/{social}/callback','Auth\LoginController@handleProviderCallback')->where('social','twitter|facebook|linkedin|google|github|bitbucket');
 

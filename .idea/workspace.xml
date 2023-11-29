@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="766eb5dd-fa46-49fc-992f-7fa8b6d85ac8" name="Changes" comment="with docker inside">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php-docker-settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="766eb5dd-fa46-49fc-992f-7fa8b6d85ac8" name="Changes" comment="task/1 (02_03)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/www_logs/nginx/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/docker/www_logs/nginx/access.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/www_logs/nginx/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/docker/www_logs/nginx/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,10 +18,38 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="task/1" />
+                    <option name="lastUsedInstant" value="1701278455" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1701278432" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="solid-practices-phpfpm:latest">
     <include_path>
@@ -222,7 +243,7 @@
       <updated>1701111522675</updated>
       <workItem from="1701111525251" duration="766000" />
       <workItem from="1701113514085" duration="5805000" />
-      <workItem from="1701276698174" duration="1356000" />
+      <workItem from="1701276698174" duration="2514000" />
     </task>
     <task id="LOCAL-00001" summary="with docker inside">
       <created>1701118070997</created>
@@ -231,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701118070997</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="task/1 (02_03)">
+      <created>1701278482732</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701278482732</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +267,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="with docker inside" />
-    <option name="LAST_COMMIT_MESSAGE" value="with docker inside" />
+    <MESSAGE value="task/1 (02_03)" />
+    <option name="LAST_COMMIT_MESSAGE" value="task/1 (02_03)" />
   </component>
 </project>
