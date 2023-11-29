@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Repositories;
+na mespace App\Repositories;
 
 use Illuminate\Support\Collection;
 
-interface CourseRepository
+interface CoursersRepository
 {
 
     public function getLatestCourses(int $limit): Collection;
