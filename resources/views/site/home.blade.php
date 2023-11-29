@@ -38,13 +38,13 @@
              <div class="row">
                @foreach(${$tab_key.'_courses'} as $course)
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        
+
                         <div class="course-block mx-auto">
                             <a href="{{ route('course.view', $course->course_slug) }}">
                                 <main>
                                     <img src="@if(Storage::exists($course->thumb_image)){{ Storage::url($course->thumb_image) }}@else{{ asset('backend/assets/images/course_detail_thumb.jpg') }}@endif">
                                     <div class="col-md-12"><h6 class="course-title">{{ $course->course_title }}</h6></div>
-                                    
+
                                     <div class="instructor-clist">
                                         <div class="col-md-12">
                                             <i class="fa fa-chalkboard-teacher"></i>&nbsp;
@@ -67,9 +67,9 @@
                                         </div>
                                     </div>
                                 </footer>
-                            </a>    
+                            </a>
                         </div>
-                        
+
                     </div>
                 @endforeach
             </div>

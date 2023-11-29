@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Instructor;
 use Illuminate\Database\Seeder;
 use App\Models\Course;
 use App\Models\CourseRating;
@@ -21,7 +22,7 @@ class CourseTableSeeder extends Seeder
 
         $course_names = array(
                     array('course_title'=>'Photography - Become a Better Photographer',
-                      'instructor_id'=>9,
+                      'instructor_id'=>Instructor::first()->getKey(),
                       'category_id'=>9,
                       'instruction_level_id'=>4,
                       'duration'=>'2 days',
