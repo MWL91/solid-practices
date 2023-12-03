@@ -9,7 +9,7 @@ final class Course implements Arrayable
 {
     private int $id;
 
-    private Instructor $instructor;
+    private InstructorName $instructor;
     private int $category_id;
     private int $instruction_level_id;
     private string $course_title;
@@ -26,15 +26,10 @@ final class Course implements Arrayable
     private CarbonInterface $created_at;
     private CarbonInterface $updated_at;
 
-    /**
-     * Course constructor.
-     */
     public function __construct(int $id, string $instructor_first_name, string $instructor_last_name, int $instructor_id, int $category_id, int $instruction_level_id, string $course_title, string $course_slug, string $keywords, string $overview, string $course_image, string $thumb_image, ?int $course_video, string $duration, float $price, float $strike_out_price, ?bool $is_active, CarbonInterface $created_at, CarbonInterface $updated_at)
     {
         $this->id = $id;
-        $this->instructor_first_name = $instructor_first_name;
-        $this->instructor_last_name = $instructor_last_name;
-        $this->instructor_id = $instructor_id;
+        $this->instructor = new InstructorName($instructor_id, $instructor_first_name, $instructor_last_name);
         $this->category_id = $category_id;
         $this->instruction_level_id = $instruction_level_id;
         $this->course_title = $course_title;
@@ -84,17 +79,17 @@ final class Course implements Arrayable
 
     public function getInstructorFirstName(): string
     {
-        return $this->instructor_first_name;
+        return $this->instructor->getFirstName();
     }
 
     public function getInstructorLastName(): string
     {
-        return $this->instructor_last_name;
+        return $this->instructor->getLastName();
     }
 
     public function getInstructorName(): string
     {
-        return $this->instructor_first_name . ' ' . $this->instructor_last_name;
+        return $this->instructor->getFullName();
     }
 
     public function getInstructorId(): int

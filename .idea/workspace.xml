@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="766eb5dd-fa46-49fc-992f-7fa8b6d85ac8" name="Changes" comment="task/4 (02_10)">
-      <change afterPath="$PROJECT_DIR$/app/ValueObjects/Course.php" afterDir="false" />
+    <list default="true" id="766eb5dd-fa46-49fc-992f-7fa8b6d85ac8" name="Changes" comment="task/5 (02_12)">
+      <change afterPath="$PROJECT_DIR$/app/ValueObjects/InstructorName.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Db/CoursesRepositoryDb.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Db/CoursesRepositoryDb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/CoursesRepositoryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CoursesRepositoryTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ValueObjects/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ValueObjects/Course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/www_logs/nginx/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/docker/www_logs/nginx/access.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="task/4" />
+        <entry key="$PROJECT_DIR$" value="task/5" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,6 +37,14 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="solution/5" />
+                    <option name="lastUsedInstant" value="1701620349" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="task/5" />
+                    <option name="lastUsedInstant" value="1701620026" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="solution/4" />
                     <option name="lastUsedInstant" value="1701616933" />
                   </RecentBranch>
@@ -48,14 +55,6 @@
                   <RecentBranch>
                     <option name="branchName" value="solution/3" />
                     <option name="lastUsedInstant" value="1701615344" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="task/3" />
-                    <option name="lastUsedInstant" value="1701615046" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="solution/2" />
-                    <option name="lastUsedInstant" value="1701286541" />
                   </RecentBranch>
                 </list>
               </option>
@@ -264,7 +263,7 @@
       <workItem from="1701113514085" duration="5805000" />
       <workItem from="1701276698174" duration="17089000" />
       <workItem from="1701358587439" duration="1000" />
-      <workItem from="1701598021559" duration="11228000" />
+      <workItem from="1701598021559" duration="12026000" />
     </task>
     <task id="LOCAL-00001" summary="with docker inside">
       <created>1701118070997</created>
@@ -347,7 +346,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701616916357</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="solution/4 (02_11)">
+      <option name="closed" value="true" />
+      <created>1701620015037</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1701620015037</updated>
+    </task>
+    <task id="LOCAL-00013" summary="task/5 (02_12)">
+      <option name="closed" value="true" />
+      <created>1701620335446</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1701620335446</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,6 +377,8 @@
     <MESSAGE value="task/3 (02_08)" />
     <MESSAGE value="solution/3 (02_09)" />
     <MESSAGE value="task/4 (02_10)" />
-    <option name="LAST_COMMIT_MESSAGE" value="task/4 (02_10)" />
+    <MESSAGE value="solution/4 (02_11)" />
+    <MESSAGE value="task/5 (02_12)" />
+    <option name="LAST_COMMIT_MESSAGE" value="task/5 (02_12)" />
   </component>
 </project>
