@@ -2,11 +2,12 @@
 
 namespace App\Repositories\Db;
 
-use App\Repositories\CoursersRepository;
+use App\Repositories\CourseRepository;
+use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 
-class CoursesRepositoryDb implements CoursersRepository
+class CoursesRepositoryDb implements CourseRepository
 {
     public function getLatestCourses(int $limit): Collection
     {
@@ -31,12 +32,13 @@ class CoursesRepositoryDb implements CoursersRepository
 
     /**
      * @param int $limit
-     * @return \Illuminate\Database\Query\Builder
+     * @return Builder
      */
-    private function getBuilder(int $limit): \Illuminate\Database\Query\Builder
+    private function getBuilder(int $limit): Builder
     {
         return DB::table('courses')
             ->select('courses.*', 'instructors.first_name', 'instructors.last_name')
+            ->leftJoin('course_ratings', 'course_ratings.course_id', '=', 'courses.id')
             ->join('instructors', 'instructors.id', '=', 'courses.instructor_id')
             ->where('courses.is_active', true)
             ->limit($limit);

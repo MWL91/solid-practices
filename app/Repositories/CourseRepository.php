@@ -4,7 +4,7 @@ namespace App\Repositories;
 
 use Illuminate\Support\Collection;
 
-interface CoursersRepository
+interface CourseRepository
 {
 
     public function getLatestCourses(int $limit): Collection;

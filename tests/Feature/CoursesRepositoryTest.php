@@ -4,82 +4,28 @@ namespace Tests\Feature;
 
 use App\Models\Category;
 use App\Models\Course;
-use App\Models\CourseRating;
 use App\Models\InstructionLevel;
 use App\Models\Instructor;
 use App\Models\User;
-use App\Repositories\CoursersRepository;
 use App\Repositories\Db\CoursesRepositoryDb;
-use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Support\Facades\DB;
-use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Tests\Factories\CreateCourses;
+use Tests\TestCase;
 
 class CoursesRepositoryTest extends TestCase
 {
-    use WithFaker, RefreshDatabase;
+    use WithFaker, RefreshDatabase, CreateCourses;
 
     /**
      * A basic test example.
      *
      * @return void
      */
-    public function testBasicTest()
+    public function testItShouldCreateAndFetchCourses(): void
     {
         // Given:
-        $user = User::create([
-            'name'=>$this->faker->name(),
-            'email'=>$this->faker->email(),
-            'password'=>$this->faker->password(),
-            'is_active'=> true
-        ]);
-
-        $category = Category::create([
-            'name'=>$this->faker->name(),
-            'slug'=>$this->faker->slug(),
-//            'icon_class'=>
-            'is_active'=> true
-        ]);
-
-        $instructor = Instructor::create([
-            'user_id' => $user->getKey(),
-            'first_name' => $this->faker->firstName(),
-            'last_name' => $this->faker->lastName(),
-            'instructor_slug' => $this->faker->slug(),
-            'contact_email' => $this->faker->email(),
-            'telephone' => $this->faker->phoneNumber(),
-            'mobile' => $this->faker->phoneNumber(),
-//            'paypal_id' => ,
-//            'link_facebook' => ,
-//            'link_linkedin' => ,
-//            'link_twitter' => ,
-//            'link_googleplus' => ,
-            'biography' => $this->faker->paragraph(),
-//            'instructor_image' => ,
-//            'total_credits' => ,
-        ]);
-
-        $instruction_level = InstructionLevel::create([
-            'level'=>1,
-        ]);
-
-        $course = Course::create([
-            'instructor_id' => $instructor->getKey(),
-            'category_id' => $category->getKey(),
-            'instruction_level_id' => $instruction_level->getKey(),
-            'course_title' => $this->faker->name(),
-            'course_slug' => $this->faker->slug(),
-            'keywords' => '',
-            'overview' => '',
-            'course_image' => '',
-            'thumb_image' => '',
-            'course_video' => '',
-            'duration' => '',
-            'price' => 0,
-            'strike_out_price' => 100,
-            'is_active' => 1,
-        ]);
-
+        $course = $this->createCourse();
         $repository = app(CoursesRepositoryDb::class);
 
         // When:
@@ -96,6 +42,10 @@ class CoursesRepositoryTest extends TestCase
         $this->assertValidStructureOfCourse($latest->first());
         $this->assertValidStructureOfCourse($free->first());
         $this->assertValidStructureOfCourse($discounted->first());
+
+        $this->assertCount(1, $latest);
+        $this->assertCount(1, $free);
+        $this->assertCount(1, $discounted);
     }
 
     /**

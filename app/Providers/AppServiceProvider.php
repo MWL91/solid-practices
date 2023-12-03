@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Repositories\CoursersRepository;
+use App\Repositories\CourseRepository;
 use App\Repositories\Db\CoursesRepositoryDb;
 use Illuminate\Support\ServiceProvider;
 
@@ -16,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind(
-            CoursersRepository::class,
+            CourseRepository::class,
             CoursesRepositoryDb::class
         );
     }

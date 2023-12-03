@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Repositories\CoursersRepository;
+use App\Repositories\CourseRepository;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Blog;
@@ -13,9 +13,9 @@ use App\Models\Config;
 
 class HomeController extends Controller
 {
-    private CoursersRepository $courseRepository;
+    private CourseRepository $courseRepository;
 
-    public function __construct(CoursersRepository $courseRepository)
+    public function __construct(CourseRepository $courseRepository)
     {
         $this->courseRepository = $courseRepository;
     }

@@ -61,7 +61,7 @@
                                         <div class="col-md-5 offset-md-1 col-sm-5 offset-sm-1 col-5 offset-1">
                                             <star class="course-rating">
                                             @for ($r=1;$r<=5;$r++)
-                                                <span class="fa fa-star {{ $r <= $course->average_rating ? 'checked' : '' }}"></span>
+                                                <span class="fa fa-star {{ $r <= ($course->average_rating ?? false) ? 'checked' : '' }}"></span>
                                             @endfor
                                             </star>
                                         </div>
