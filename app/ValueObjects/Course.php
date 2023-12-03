@@ -9,9 +9,7 @@ final class Course implements Arrayable
 {
     private int $id;
 
-    private string $instructor_first_name;
-    private string $instructor_last_name;
-    private int $instructor_id;
+    private Instructor $instructor;
     private int $category_id;
     private int $instruction_level_id;
     private string $course_title;
