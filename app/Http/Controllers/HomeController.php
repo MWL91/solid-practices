@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\CourseRepository;
+use App\Repositories\InstructorRepository;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Blog;
@@ -14,10 +16,15 @@ use App\Models\Config;
 class HomeController extends Controller
 {
     private CourseRepository $courseRepository;
+    private InstructorRepository $instructorRepository;
 
-    public function __construct(CourseRepository $courseRepository)
+    public function __construct(
+        CourseRepository $courseRepository,
+        InstructorRepository $instructorRepository
+    )
     {
         $this->courseRepository = $courseRepository;
+        $this->instructorRepository = $instructorRepository;
     }
 
     /**
@@ -25,22 +32,25 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index(Request $request): View
     {
+        $limit = $request->get('limit', 8);
 
-        $latestTab_courses = $this->courseRepository->getLatestCourses($request->get('limit', 8));
-        $freeTab_courses = $this->courseRepository->getFreeCourses($request->get('limit', 8));
-        $discountTab_courses = $this->courseRepository->getDiscountCourses($request->get('limit', 8));
+        $latestTab_courses = $this->courseRepository->getLatestCourses($limit);
+        $freeTab_courses = $this->courseRepository->getFreeCourses($limit);
+        $discountTab_courses = $this->courseRepository->getDiscountCourses($limit);
 
-        $instructors = DB::table('instructors')
-                        ->select('instructors.*')
-                        ->join('users', 'users.id', '=', 'instructors.user_id')
-                        ->where('users.is_active',1)
-                        ->groupBy('instructors.id')
-                        ->limit(8)
-                        ->get();
+        $instructors = $this->instructorRepository->getActive($limit);
 
-        return view('site/home', compact('latestTab_courses', 'freeTab_courses', 'discountTab_courses', 'instructors'));
+        return \Illuminate\Support\Facades\View::make(
+            'site/home',
+            [
+                'latestTab_courses' => $latestTab_courses,
+                'freeTab_courses' => $freeTab_courses,
+                'discountTab_courses' => $discountTab_courses,
+                'instructors' => $instructors
+            ]
+        );
     }
 
     /**

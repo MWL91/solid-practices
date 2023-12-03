@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="766eb5dd-fa46-49fc-992f-7fa8b6d85ac8" name="Changes" comment="solution/2 (02_07)" />
+    <list default="true" id="766eb5dd-fa46-49fc-992f-7fa8b6d85ac8" name="Changes" comment="task/3 (02_08)">
+      <change afterPath="$PROJECT_DIR$/app/Repositories/Db/InstructorRepositoryDb.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/InstructorRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/www_logs/nginx/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/docker/www_logs/nginx/access.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Factories/CreateCourses.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Factories/CreateCourses.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="solution/2" />
+        <entry key="$PROJECT_DIR$" value="task/3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,6 +39,10 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="solution/3" />
+                    <option name="lastUsedInstant" value="1701615344" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="task/3" />
                     <option name="lastUsedInstant" value="1701615046" />
@@ -46,10 +58,6 @@
                   <RecentBranch>
                     <option name="branchName" value="solution/1" />
                     <option name="lastUsedInstant" value="1701279871" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="task/1" />
-                    <option name="lastUsedInstant" value="1701278455" />
                   </RecentBranch>
                 </list>
               </option>
@@ -258,7 +266,7 @@
       <workItem from="1701113514085" duration="5805000" />
       <workItem from="1701276698174" duration="17089000" />
       <workItem from="1701358587439" duration="1000" />
-      <workItem from="1701598021559" duration="6309000" />
+      <workItem from="1701598021559" duration="7203000" />
     </task>
     <task id="LOCAL-00001" summary="with docker inside">
       <created>1701118070997</created>
@@ -317,7 +325,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701614985770</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="task/3 (02_08)">
+      <option name="closed" value="true" />
+      <created>1701615327132</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701615327132</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,6 +345,7 @@
     <MESSAGE value="solution/1 (02_05)" />
     <MESSAGE value="task/2 (02_06)" />
     <MESSAGE value="solution/2 (02_07)" />
-    <option name="LAST_COMMIT_MESSAGE" value="solution/2 (02_07)" />
+    <MESSAGE value="task/3 (02_08)" />
+    <option name="LAST_COMMIT_MESSAGE" value="task/3 (02_08)" />
   </component>
 </project>
