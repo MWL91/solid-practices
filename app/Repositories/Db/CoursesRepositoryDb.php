@@ -2,6 +2,8 @@
 
 namespace App\Repositories\Db;
 
+use App\Models\Category;
+use App\Models\InstructionLevel;
 use App\Repositories\CourseRepository;
 use App\ValueObjects\Course;
 use Illuminate\Database\Query\Builder;
@@ -72,5 +74,15 @@ class CoursesRepositoryDb implements CourseRepository
             Carbon::make($data->created_at),
             Carbon::make($data->updated_at)
         );
+    }
+
+    public function getCategories(bool $active = true): Collection
+    {
+        return Category::where('is_active', $active)->get();
+    }
+
+    public function getInstructionLevels(): Collection
+    {
+        return InstructionLevel::get();
     }
 }

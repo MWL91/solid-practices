@@ -12,6 +12,7 @@
 */
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\CourseListController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -37,7 +38,7 @@ Route::get('checkUserEmailExists', 'HomeController@checkUserEmailExists');
 Route::get('checkUserEmailExists', 'HomeController@checkUserEmailExists');
 
 Route::get('course-view/{course_slug}', 'CourseController@courseView')->name('course.view');
-Route::get('courses', 'CourseController@courseList')->name('course.list');
+Route::get('courses', [CourseListController::class, '__invoke'])->name('course.list');
 Route::get('checkout/{course_slug}', 'CourseController@checkout')->name('course.checkout');
 Route::get('course-breadcrumb', 'CourseController@saveBreadcrumb')->name('course.breadcurmb');
 

@@ -12,4 +12,8 @@ interface CourseRepository
     public function getFreeCourses(int $limit): Collection;
 
     public function getDiscountCourses(int $limit): Collection;
+
+    public function getCategories(bool $active = true): Collection;
+
+    public function getInstructionLevels(): Collection;
 }
