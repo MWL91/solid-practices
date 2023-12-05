@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="766eb5dd-fa46-49fc-992f-7fa8b6d85ac8" name="Changes" comment="solution/6c (02_18)">
-      <change afterPath="$PROJECT_DIR$/app/ValueObjects/Boundaries.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/PriceCriterion.php" afterDir="false" />
+    <list default="true" id="766eb5dd-fa46-49fc-992f-7fa8b6d85ac8" name="Changes" comment="solution/6d (02_19)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Criteria/PriceCriterion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Criteria/PriceCriterion.php" afterDir="false" />
     </list>
@@ -410,7 +408,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701790586230</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="solution/6d (02_19)">
+      <option name="closed" value="true" />
+      <created>1701793915611</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1701793915611</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,6 +438,7 @@
     <MESSAGE value="solution/6 (02_16)" />
     <MESSAGE value="solution/6b (02_17)" />
     <MESSAGE value="solution/6c (02_18)" />
-    <option name="LAST_COMMIT_MESSAGE" value="solution/6c (02_18)" />
+    <MESSAGE value="solution/6d (02_19)" />
+    <option name="LAST_COMMIT_MESSAGE" value="solution/6d (02_19)" />
   </component>
 </project>

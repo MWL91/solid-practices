@@ -42,7 +42,7 @@ class PriceCriterion implements CourseListCriterion
         $to = null;
         foreach($priceList as $price)
         {
-            if(is_int($price)) {
+            if(is_numeric($price)) {
                 $to = null;
                 continue;
             }
