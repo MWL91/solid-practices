@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="766eb5dd-fa46-49fc-992f-7fa8b6d85ac8" name="Changes" comment="solution/6 (02_16)">
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Criteria/CourseCategoryCriterion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Criteria/CourseListCriterion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Criteria/InstructionLevelCriterion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Criteria/PriceCriterion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Criteria/SortCriterion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/QueryHandlers/CourseListQueryDbHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/QueryHandlers/CourseListQueryHandler.php" afterDir="false" />
+    <list default="true" id="766eb5dd-fa46-49fc-992f-7fa8b6d85ac8" name="Changes" comment="solution/6b (02_17)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseListController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Queries/CourseListQuery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Queries/CourseListQuery.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/CourseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CourseRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Db/CoursesRepositoryDb.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Db/CoursesRepositoryDb.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/QueryHandlers/CourseListQueryDbHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/QueryHandlers/CourseListQueryDbHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/QueryHandlers/CourseListQueryHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/QueryHandlers/CourseListQueryHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/www_logs/nginx/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/docker/www_logs/nginx/error.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +40,10 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="solution/6c" />
+                    <option name="lastUsedInstant" value="1701789929" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="solution/6" />
                     <option name="lastUsedInstant" value="1701786170" />
                   </RecentBranch>
@@ -60,10 +58,6 @@
                   <RecentBranch>
                     <option name="branchName" value="solution/5" />
                     <option name="lastUsedInstant" value="1701620349" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="task/5" />
-                    <option name="lastUsedInstant" value="1701620026" />
                   </RecentBranch>
                 </list>
               </option>
@@ -397,7 +391,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701675135615</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="solution/6b (02_17)">
+      <option name="closed" value="true" />
+      <created>1701789652518</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1701789652518</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,6 +419,7 @@
     <MESSAGE value="solution/5 (02_13)" />
     <MESSAGE value="task/6 (03_02)" />
     <MESSAGE value="solution/6 (02_16)" />
-    <option name="LAST_COMMIT_MESSAGE" value="solution/6 (02_16)" />
+    <MESSAGE value="solution/6b (02_17)" />
+    <option name="LAST_COMMIT_MESSAGE" value="solution/6b (02_17)" />
   </component>
 </project>

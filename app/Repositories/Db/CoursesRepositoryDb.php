@@ -9,6 +9,7 @@ use App\Repositories\CourseRepository;
 use App\Repositories\QueryHandlers\CourseListQueryHandler;
 use App\ValueObjects\Course;
 use Illuminate\Database\Query\Builder;
+use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
@@ -95,8 +96,8 @@ class CoursesRepositoryDb implements CourseRepository
         return InstructionLevel::get();
     }
 
-    public function getListing(CourseListQuery $courseListQuery): Collection
+    public function getListing(CourseListQuery $courseListQuery): LengthAwarePaginator
     {
-        return $this->courseListQuery->handle($courseListQuery);
+        return $this->courseListQuery->paginate($courseListQuery);
     }
 }

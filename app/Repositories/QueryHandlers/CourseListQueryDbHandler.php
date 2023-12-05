@@ -7,13 +7,14 @@ use App\Repositories\Criteria\CourseCategoryCriterion;
 use App\Repositories\Criteria\InstructionLevelCriterion;
 use App\Repositories\Criteria\PriceCriterion;
 use App\Repositories\Criteria\SortCriterion;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 
 class CourseListQueryDbHandler implements CourseListQueryHandler
 {
-    public function handle(CourseListQuery $courseListQuery): Collection
+    private function builder(CourseListQuery $courseListQuery): Builder
     {
         $query = $this->getBuilder();
 
@@ -30,7 +31,17 @@ class CourseListQueryDbHandler implements CourseListQueryHandler
             }
         }
 
-        return $query->groupBy('courses.id')->paginate($courseListQuery->getPaginateCount());
+        return $query->groupBy('courses.id');
+    }
+
+    public function paginate(CourseListQuery $courseListQuery): LengthAwarePaginator
+    {
+        return $this->builder($courseListQuery)->paginate($courseListQuery->getPaginateCount());
+    }
+
+    public function handle(CourseListQuery $courseListQuery): Collection
+    {
+        return $this->builder($courseListQuery)->get();
     }
 
     private function getBuilder(): Builder

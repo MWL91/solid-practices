@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Queries\CourseListQuery;
+use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
 
 interface CourseRepository
@@ -18,5 +19,5 @@ interface CourseRepository
 
     public function getInstructionLevels(): Collection;
 
-    public function getListing(CourseListQuery $courseListQuery): Collection;
+    public function getListing(CourseListQuery $courseListQuery): LengthAwarePaginator;
 }

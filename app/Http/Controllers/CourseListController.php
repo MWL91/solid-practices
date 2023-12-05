@@ -22,12 +22,7 @@ final class CourseListController extends Controller
 
     public function __invoke(CourseListRequest $request): IView
     {
-
-
-
-
-
-
+        $courses = $this->courseRepository->getListing($request->getQuery());
         $categories = $this->courseRepository->getCategories();
         $instruction_levels = $this->courseRepository->getInstructionLevels();
 
