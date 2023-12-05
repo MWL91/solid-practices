@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="766eb5dd-fa46-49fc-992f-7fa8b6d85ac8" name="Changes" comment="task/6 (03_02)">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseListController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/CourseListRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Queries/CourseListQuery.php" afterDir="false" />
+    <list default="true" id="766eb5dd-fa46-49fc-992f-7fa8b6d85ac8" name="Changes" comment="solution/6 (02_16)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/CourseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CourseRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Db/CoursesRepositoryDb.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Db/CoursesRepositoryDb.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseListController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CourseListRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CourseListRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Queries/CourseListQuery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Queries/CourseListQuery.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/www_logs/nginx/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/docker/www_logs/nginx/access.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="task/6" />
+        <entry key="$PROJECT_DIR$" value="solution/6b" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,7 +39,11 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="solution/6" />
-                    <option name="lastUsedInstant" value="1701623740" />
+                    <option name="lastUsedInstant" value="1701786170" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="solution/6b" />
+                    <option name="lastUsedInstant" value="1701675206" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="task/6" />
@@ -56,10 +56,6 @@
                   <RecentBranch>
                     <option name="branchName" value="task/5" />
                     <option name="lastUsedInstant" value="1701620026" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="solution/4" />
-                    <option name="lastUsedInstant" value="1701616933" />
                   </RecentBranch>
                 </list>
               </option>
@@ -253,6 +249,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="PHPUnit.CoursesRepositoryTest.testItShouldCreateAndFetchCourses" />
+        <item itemvalue="PHPUnit.CoursesRepositoryTest.testItShouldCreateAndFetchCourses" />
       </list>
     </recent_temporary>
   </component>
@@ -268,7 +265,8 @@
       <workItem from="1701113514085" duration="5805000" />
       <workItem from="1701276698174" duration="17089000" />
       <workItem from="1701358587439" duration="1000" />
-      <workItem from="1701598021559" duration="21420000" />
+      <workItem from="1701598021559" duration="22745000" />
+      <workItem from="1701785706550" duration="1262000" />
     </task>
     <task id="LOCAL-00001" summary="with docker inside">
       <created>1701118070997</created>
@@ -383,7 +381,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701622510906</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="solution/6 (02_16)">
+      <option name="closed" value="true" />
+      <created>1701675135615</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1701675135615</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,6 +408,7 @@
     <MESSAGE value="task/5 (02_12)" />
     <MESSAGE value="solution/5 (02_13)" />
     <MESSAGE value="task/6 (03_02)" />
-    <option name="LAST_COMMIT_MESSAGE" value="task/6 (03_02)" />
+    <MESSAGE value="solution/6 (02_16)" />
+    <option name="LAST_COMMIT_MESSAGE" value="solution/6 (02_16)" />
   </component>
 </project>

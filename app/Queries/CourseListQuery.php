@@ -5,32 +5,32 @@ namespace App\Queries;
 
 final class CourseListQuery
 {
-    private ?int $category_id;
-    private ?int $instruction_level_id;
+    private ?array $categoryIds;
+    private ?array $instructionLevelIds;
     private ?string $price_id;
     private string $sort;
 
     public function __construct(
-        ?int $category_id,
-        ?int $instruction_level_id,
+        ?array $categoryIds,
+        ?array $instructionLevelIds,
         ?string $price_id,
         string $sort = 'asc'
     )
     {
-        $this->category_id = $category_id;
-        $this->instruction_level_id = $instruction_level_id;
+        $this->categoryIds = $categoryIds;
+        $this->instructionLevelIds = $instructionLevelIds;
         $this->price_id = $price_id;
         $this->sort = $sort;
     }
 
-    public function getCategoryId(): ?int
+    public function getCategoryIds(): ?array
     {
-        return $this->category_id;
+        return $this->categoryIds;
     }
 
-    public function getInstructionLevelId(): ?int
+    public function getInstructionLevelIds(): ?array
     {
-        return $this->instruction_level_id;
+        return $this->instructionLevelIds;
     }
 
     public function getPriceId(): ?string

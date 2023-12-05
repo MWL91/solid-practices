@@ -17,8 +17,10 @@ class CourseListRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'category_id' => ['nullable', 'exists:categories,id'],
-            'instruction_level_id' => ['nullable', 'exists:instruction_levels,id'],
+            'category_id' => ['nullable', 'array'],
+            'category_id.*' => ['exists:categories,id'],
+            'instruction_level_id' => ['nullable', 'array'],
+            'instruction_level_id.*' => ['exists:instruction_levels,id'],
             'price_id' => ['nullable', 'array'],
             'sort_price' => ['nullable', 'in:asc,desc'],
         ];

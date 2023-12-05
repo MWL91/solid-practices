@@ -24,8 +24,8 @@ final class CourseListController extends Controller
     {
         $paginate_count = $request->get('paginate', 9);
 
-        $category_search = $request->getQuery()->getCategoryId();
-        $instruction_level_id = $request->getQuery()->getInstructionLevelId();
+        $category_search = $request->getQuery()->getCategoryIds();
+        $instruction_level_id = $request->getQuery()->getInstructionLevelIds();
         $prices = $request->getQuery()->getPriceId();
         $sort_price = $request->getQuery()->getSort();
 
