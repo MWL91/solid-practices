@@ -3,6 +3,7 @@
 namespace App\Repositories\Criteria;
 
 use App\Queries\CourseListQuery;
+use App\ValueObjects\Boundaries;
 use Illuminate\Database\Query\Builder;
 
 class PriceCriterion implements CourseListCriterion
@@ -24,52 +25,43 @@ class PriceCriterion implements CourseListCriterion
 
     public function applyToListBuilder(Builder $query): Builder
     {
+        $boundaries = $this->getPriceBoundaries($this->courseListQuery->getPriceIds());
 
-        $price_count = count($this->courseListQuery->getPriceIds());
-        $is_greater_500 = false;
-        // echo $price_count;exit;
-        foreach ($this->courseListQuery->getPriceIds() as $p => $price) {
-            $p++;
-            $price_split = explode('-', $price);
-
-            if($price_count == 1)
-            {
-                $from = $price_split[0];
-                if($price == 500)
-                {
-                    $is_greater_500 = true;
-                }
-                else
-                {
-                    $to = $price_split[1];
-                }
-
-            }
-            elseif($p==1)
-            {
-                $from = $price_split[0];
-            }
-            elseif($p==$price_count)
-            {
-
-                if($price == 500)
-                {
-                    $is_greater_500 = true;
-                }
-                else
-                {
-                    $to = $price_split[1];
-                }
-
-            }
-
-        }
-        $query->where('courses.price', '>=', $from);
-        if(!$is_greater_500)
+        $query->where('courses.price', '>=', $boundaries->getFrom());
+        if($boundaries->getTo() !== null)
         {
-            $query->where('courses.price', '<=', $to);
+            $query->where('courses.price', '<=', $boundaries->getTo());
         }
 
         return $query;
+    }
+
+    public function getPriceBoundaries(?array $priceList): Boundaries
+    {
+        $from = null;
+        $to = null;
+        foreach($priceList as $price)
+        {
+            if(is_int($price)) {
+                $to = null;
+                continue;
+            }
+
+            [$currentFrom, $currentTo] = explode('-', $price);
+            if($from === null) {
+                $from = $currentFrom;
+                $to = $currentTo;
+            }
+
+            if($from>=$currentFrom) {
+                $from = $currentFrom;
+            }
+
+            if($to<=$currentTo) {
+                $to = $currentTo;
+            }
+        }
+
+        return new Boundaries($from ?? 0, $to ?? null);
     }
 }

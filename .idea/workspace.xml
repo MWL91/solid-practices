@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="766eb5dd-fa46-49fc-992f-7fa8b6d85ac8" name="Changes" comment="solution/6b (02_17)">
+    <list default="true" id="766eb5dd-fa46-49fc-992f-7fa8b6d85ac8" name="Changes" comment="solution/6c (02_18)">
+      <change afterPath="$PROJECT_DIR$/app/ValueObjects/Boundaries.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/PriceCriterion.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseListController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/CourseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CourseRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Db/CoursesRepositoryDb.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Db/CoursesRepositoryDb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/QueryHandlers/CourseListQueryDbHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/QueryHandlers/CourseListQueryDbHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/QueryHandlers/CourseListQueryHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/QueryHandlers/CourseListQueryHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/www_logs/nginx/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/docker/www_logs/nginx/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Criteria/PriceCriterion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Criteria/PriceCriterion.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="solution/6b" />
+        <entry key="$PROJECT_DIR$" value="solution/6c" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,6 +36,10 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="solution/6d" />
+                    <option name="lastUsedInstant" value="1701790841" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="solution/6c" />
                     <option name="lastUsedInstant" value="1701789929" />
@@ -54,10 +55,6 @@
                   <RecentBranch>
                     <option name="branchName" value="task/6" />
                     <option name="lastUsedInstant" value="1701622490" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="solution/5" />
-                    <option name="lastUsedInstant" value="1701620349" />
                   </RecentBranch>
                 </list>
               </option>
@@ -225,7 +222,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="PHPUnit.CoursesRepositoryTest.testItShouldCreateAndFetchCourses">
+  <component name="RunManager" selected="PHPUnit.PriceCriterion.testItShouldCreateBoundaries">
     <configuration name="CoursesRepositoryTest.testItShouldCreateAndFetchCourses" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -233,6 +230,10 @@
         </PhpTestInterpreterSettings>
       </CommandLine>
       <TestRunner class="Tests\Feature\CoursesRepositoryTest" configuration_file="/opt/project/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CoursesRepositoryTest.php" method="testItShouldCreateAndFetchCourses" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PriceCriterion.testItShouldCreateBoundaries" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\PriceCriterion" configuration_file="/opt/project/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/PriceCriterion.php" method="testItShouldCreateBoundaries" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -246,10 +247,12 @@
     </configuration>
     <list>
       <item itemvalue="PHPUnit.phpunit.xml" />
+      <item itemvalue="PHPUnit.PriceCriterion.testItShouldCreateBoundaries" />
       <item itemvalue="PHPUnit.CoursesRepositoryTest.testItShouldCreateAndFetchCourses" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.PriceCriterion.testItShouldCreateBoundaries" />
         <item itemvalue="PHPUnit.CoursesRepositoryTest.testItShouldCreateAndFetchCourses" />
         <item itemvalue="PHPUnit.CoursesRepositoryTest.testItShouldCreateAndFetchCourses" />
       </list>
@@ -399,7 +402,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701789652518</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="solution/6c (02_18)">
+      <option name="closed" value="true" />
+      <created>1701790586230</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1701790586230</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,6 +431,7 @@
     <MESSAGE value="task/6 (03_02)" />
     <MESSAGE value="solution/6 (02_16)" />
     <MESSAGE value="solution/6b (02_17)" />
-    <option name="LAST_COMMIT_MESSAGE" value="solution/6b (02_17)" />
+    <MESSAGE value="solution/6c (02_18)" />
+    <option name="LAST_COMMIT_MESSAGE" value="solution/6c (02_18)" />
   </component>
 </project>
