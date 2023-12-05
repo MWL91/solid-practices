@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 
+use App\Queries\CourseListQuery;
 use Illuminate\Support\Collection;
 
 interface CourseRepository
@@ -16,4 +17,6 @@ interface CourseRepository
     public function getCategories(bool $active = true): Collection;
 
     public function getInstructionLevels(): Collection;
+
+    public function getListing(CourseListQuery $courseListQuery): Collection;
 }

@@ -7,20 +7,24 @@ final class CourseListQuery
 {
     private ?array $categoryIds;
     private ?array $instructionLevelIds;
-    private ?string $price_id;
+    private ?array $priceIds;
     private string $sort;
+
+    private int $paginateCount;
 
     public function __construct(
         ?array $categoryIds,
         ?array $instructionLevelIds,
-        ?string $price_id,
-        string $sort = 'asc'
+        ?array $priceIds,
+        string $sort = 'asc',
+        int $paginateCount = 9
     )
     {
         $this->categoryIds = $categoryIds;
         $this->instructionLevelIds = $instructionLevelIds;
-        $this->price_id = $price_id;
+        $this->priceIds = $priceIds;
         $this->sort = $sort;
+        $this->paginateCount = $paginateCount;
     }
 
     public function getCategoryIds(): ?array
@@ -33,15 +37,19 @@ final class CourseListQuery
         return $this->instructionLevelIds;
     }
 
-    public function getPriceId(): ?string
+    public function getPriceIds(): ?array
     {
-        return $this->price_id;
+        return $this->priceIds;
     }
 
-    public function getSort(): ?string
+    public function getSort(): string
     {
         return $this->sort;
     }
 
+    public function getPaginateCount(): int
+    {
+        return $this->paginateCount;
+    }
 
 }

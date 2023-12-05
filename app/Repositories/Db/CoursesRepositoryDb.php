@@ -4,7 +4,9 @@ namespace App\Repositories\Db;
 
 use App\Models\Category;
 use App\Models\InstructionLevel;
+use App\Queries\CourseListQuery;
 use App\Repositories\CourseRepository;
+use App\Repositories\QueryHandlers\CourseListQueryHandler;
 use App\ValueObjects\Course;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Carbon;
@@ -13,6 +15,13 @@ use Illuminate\Support\Facades\DB;
 
 class CoursesRepositoryDb implements CourseRepository
 {
+    private CourseListQueryHandler $courseListQuery;
+
+    public function __construct(CourseListQueryHandler $courseListQuery)
+    {
+        $this->courseListQuery = $courseListQuery;
+    }
+
     public function getLatestCourses(int $limit): Collection
     {
         return $this->getBuilder($limit)
@@ -84,5 +93,10 @@ class CoursesRepositoryDb implements CourseRepository
     public function getInstructionLevels(): Collection
     {
         return InstructionLevel::get();
+    }
+
+    public function getListing(CourseListQuery $courseListQuery): Collection
+    {
+        return $this->courseListQuery->handle($courseListQuery);
     }
 }

@@ -6,6 +6,8 @@ use App\Repositories\CourseRepository;
 use App\Repositories\Db\CoursesRepositoryDb;
 use App\Repositories\Db\InstructorRepositoryDb;
 use App\Repositories\InstructorRepository;
+use App\Repositories\QueryHandlers\CourseListQueryDbHandler;
+use App\Repositories\QueryHandlers\CourseListQueryHandler;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -25,6 +27,11 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(
             InstructorRepository::class,
             InstructorRepositoryDb::class
+        );
+
+        $this->app->bind(
+            CourseListQueryHandler::class,
+            CourseListQueryDbHandler::class
         );
     }
 
