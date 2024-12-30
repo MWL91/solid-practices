@@ -1,7 +1,7 @@
 FROM devilbox/php-fpm:7.4-base
 
 RUN apt-get update && \
-        apt-get install zip git -y \
+        apt-get install zip git -y && \
         docker-php-ext-install pdo_mysql
 
 # composer

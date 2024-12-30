@@ -21,13 +21,14 @@ services:
     ports:
       - "6665:6001"
     container_name: dockerphp74
-    build: docker/containers/php-fpm
+    image: lenkowskizy/solid-practices
     command: bash -c "php-fpm -F"
     volumes:
       - ./:/var/www/html:cached
       - ./docker/php-custom.ini:/usr/local/etc/php/conf.d/php-custom.ini
     networks:
       - dockerphp74
+    platform: linux/amd64
   mysql:
     networks:
       - dockerphp74
@@ -51,3 +52,4 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_USERNAME: root
       PMA_HOST: mysql
+    platform: linux/amd64
